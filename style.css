@@ -1,0 +1,36 @@
+
+        * { box-sizing: border-box;}
+
+        .row { display: flex; }
+        .column {
+            flex: 40%;
+        }
+
+        #intro {
+            font-family: Arial Narrow;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45vw;
+            height: 50vh;
+        }
+
+        svg {
+            width: 300px;
+            font-family: Lato;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            pointer-events: none;
+        }
+
+        .wrapper {
+            transition: transform 300ms ease-in-out;
+        }
+
+        .wrapper:hover {
+            transform: scale(1.1);
+        }

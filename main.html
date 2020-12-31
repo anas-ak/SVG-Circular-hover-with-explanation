@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Original Author: Grelard Antoine - https://codepen.io/ikoshowa/pen/vYEjGEK -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Hover</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+            <div id='intro'>
+                <h2>Notes</h2>
+                <p>
+                    The viewBox is an attribute of the &lt;svg&gt; element. Its value is a list of four numbers, separated by whitespace or commas: x, y, width, height. 
+                </p>
+                <p>
+                    A &lt;path&gt; is the most general shape that can be used in SVG. Using a path element, you can draw rectangles (with or without rounded corners), circles, ellipses, polylines, and polygons. Basically any of the other types of shapes, bezier curves, quadratic curves, and many more.
+                </p>
+                <p>
+                    The shape of a &lt;path&gt; element is defined by one parameter: d. The d attribute contains a series of commands and parameters used by those commands.
+                </p>         
+                <p>
+                    Each of the commands is instantiated (for example, creating a class, naming and locating it) by a specific letter. For instance, let's move to the x and y coordinates (10, 10). The "Move to" command is called with the letter M. When the parser runs into this letter, it knows it needs to move to a point. So, to move to (10,10) the command to use would be M 10 10. After that, the parser begins reading for the next command.
+                </p>
+            </div>
+        </div>
+        <div class="column">
+            <h2 style="text-align: center; font-family: Arial Narrow">Hover Over Me</h2>
+            <section>
+                <div class="wrapper">
+                     <svg viewBox = "0 0 200 200">
+                         <defs>
+                             <path id="circle" 
+                              d = "M 100 50 A 50 50 0 1 1 100 150 A 25 25 0 1 1 100 50"/>
+                         </defs>
+                         <text>
+                             <textPath href="#circle"> Round & round
+                             </textPath>
+                             <textPath href="#circle" 
+                              startOffset="50%"> Very Interesting
+                             </textPath>
+                         </text>
+                     </svg>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
